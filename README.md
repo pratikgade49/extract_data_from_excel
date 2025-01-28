@@ -1,16 +1,23 @@
 **FTPS Data Ingestion Script**
 This Python script automates the process of downloading, processing, and ingesting data from an FTPS server into a MySQL database. It handles file processing, logging, error handling, and database upserts, making it suitable for ETL (Extract, Transform, Load) operations.
 **Features**
+
 **• Secure File Transfer:** Connects to an FTPS server using FTP_TLS for secure file downloads.
+
 **• Automatic File Handling:**
 ◦ Identifies the latest .csv or .xlsx file in the FTPS directory.
 ◦ Converts .csv or .xls files to .xlsx format for consistency.
+
 **• Data Transformation:**
 ◦ Adjusts amounts based on currency conversions (e.g., converts GBP to USD).
 ◦ Cleans and maps columns using customizable mappings.
-• Batch Upserts: Inserts or updates data into a MySQL table in batches, ensuring efficient database operations.
-• Retry Logic: Includes retries for FTPS connections and operations to handle transient failures.
-• Detailed Logging: Tracks each step, including errors, for easier debugging.
+
+• **Batch Upserts**: Inserts or updates data into a MySQL table in batches, ensuring efficient database operations.
+
+• **Retry Logic**: Includes retries for FTPS connections and operations to handle transient failures.
+
+• **Detailed Logging**: Tracks each step, including errors, for easier debugging.
+
 **Prerequisites**
 1 Python Dependencies: Install the required libraries using the following command:
 bash
